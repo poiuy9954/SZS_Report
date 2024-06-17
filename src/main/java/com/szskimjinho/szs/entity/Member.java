@@ -1,9 +1,9 @@
 package com.szskimjinho.szs.entity;
 
 import com.szskimjinho.base.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.UuidGenerator;
 
 @Getter
 @Builder
@@ -14,6 +14,7 @@ import lombok.*;
 public class Member extends BaseEntity {
 
     @Id
+    @UuidGenerator
     private String memberKey;
 
     private String userId;

@@ -2,16 +2,15 @@ package com.szskimjinho.szs.controller;
 
 
 import com.szskimjinho.szs.dto.MemberDTO;
+import com.szskimjinho.szs.dto.ResDTO;
 import com.szskimjinho.szs.entity.Member;
 import com.szskimjinho.szs.service.AuthorizationMemberService;
 import com.szskimjinho.szs.service.MemberService;
+import com.szskimjinho.szs.service.SignUpMemberRuleService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -21,8 +20,8 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class LoginController {
 
-    private final MemberService memberService;
-
+    private final SignUpMemberRuleService signUpMemberRuleService;
+    
     @GetMapping("/getAuthSignupUser")
     public String getAuthSignupUser(){
         return "authUsers";
@@ -34,16 +33,8 @@ public class LoginController {
     }
 
     @PostMapping("signup")
-    public String szsSignUp(){
-        memberService.saveAndChgOne(
-                MemberDTO.builder()
-                .memberKey(UUID.randomUUID().toString())
-                .userId("Test1_ID")
-                .password("Test1_PW")
-                .userName("Test1_userName")
-                .regNo("0000000000000")
-                .build());
-
-        return null;
+    public ResDTO szsSignUp(@RequestBody MemberDTO memberDTO){
+        // TODO: 2024/06/18 Validation 추가 필요함(memberDTO에 대한) 
+        return signUpMemberRuleService.registeMember(memberDTO);
     }
 }

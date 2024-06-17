@@ -24,7 +24,7 @@ public class MemberMapperTest {
                         .memberKey(UUID.randomUUID().toString())
                         .userId("Test1_ID")
                         .password("Test1_PW")
-                        .userName("Test1_userName")
+                        .name("Test1_userName")
                         .regNo("0000000000000")
                         .build()
         );

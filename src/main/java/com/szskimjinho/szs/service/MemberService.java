@@ -18,6 +18,12 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final MemberMapper memberMapper;
 
+    public boolean existById(MemberDTO memberDTO){
+        log.info("MemberService::existById");
+        log.debug("MemberService::existById memberDTO {} " , memberDTO);
+        return memberRepository.existsByUserId(memberMapper.toMemberEntity(memberDTO).getUserId());
+    }
+
     public MemberDTO getOneById(MemberDTO memberDTO){
         log.info("MemberService::getOneById()");
         return memberMapper.toMemberDTO(memberRepository.findById(memberDTO.getMemberKey()).orElse(new Member()));
@@ -30,6 +36,7 @@ public class MemberService {
 
     public void saveAndChgOne(MemberDTO memberDTO){
         log.info("MemberService::saveAndChgOne()");
+        log.debug("MemberService::saveAndChgOne memberDTO {} ", memberDTO);
         memberRepository.save(
                 memberMapper.toMemberEntity(memberDTO)
         );

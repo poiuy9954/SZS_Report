@@ -14,6 +14,6 @@ public class AuthorizationMember {
     String regNo;
 
     public boolean isAuthMember(MemberDTO memberDTO){
-        return this.name.equals(memberDTO.getUserName()) && this.regNo.equals(memberDTO.getRegNo());
+        return this.name.equals(memberDTO.getName()) && this.regNo.equals(memberDTO.getRegNo());
     }
 }
