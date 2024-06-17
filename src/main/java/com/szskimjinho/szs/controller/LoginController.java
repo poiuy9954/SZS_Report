@@ -2,6 +2,8 @@ package com.szskimjinho.szs.controller;
 
 
 import com.szskimjinho.szs.dto.MemberDTO;
+import com.szskimjinho.szs.entity.Member;
+import com.szskimjinho.szs.service.AuthorizationMemberService;
 import com.szskimjinho.szs.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,12 +23,9 @@ public class LoginController {
 
     private final MemberService memberService;
 
-    @Value("${authuser}")
-    String authUsers;
-
     @GetMapping("/getAuthSignupUser")
     public String getAuthSignupUser(){
-        return authUsers;
+        return "authUsers";
     }
 
     @PostMapping("/login")
