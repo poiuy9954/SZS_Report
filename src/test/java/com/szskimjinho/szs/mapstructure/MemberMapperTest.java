@@ -25,7 +25,7 @@ public class MemberMapperTest {
                         .userId("Test1_ID")
                         .password("Test1_PW")
                         .name("Test1_userName")
-                        .regNo("0000000000000")
+                        .regNo("910424-1234567")
                         .build()
         );
         log.debug(String.valueOf(member));

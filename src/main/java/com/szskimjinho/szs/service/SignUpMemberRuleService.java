@@ -27,6 +27,7 @@ public class SignUpMemberRuleService {
          *   2. 기 가입자 인지 검사(ID중복 및 주민번호 중복 검사?)
          *   3. 가입 등록
          * */
+
         ResDTO resDTO = new ResDTO();
         //*   1. auth-member에 포함되는지 검사
         this.isAuthMember(resDTO,memberDTO);
@@ -38,8 +39,8 @@ public class SignUpMemberRuleService {
         if (resDTO.isFaild())
             return resDTO;
 
+        //*   3. 가입 등록
         this.memberService.saveAndChgOne(memberDTO);
-
         resDTO.setResDTO(Constant.ResDTO.S00000);
         return resDTO;
     }

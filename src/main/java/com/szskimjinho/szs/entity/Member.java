@@ -21,5 +21,7 @@ public class Member extends BaseEntity {
     private String password;
     private String userName;
     private String regNo;
+    private String bDay;
+    private String gender;
 
 }
