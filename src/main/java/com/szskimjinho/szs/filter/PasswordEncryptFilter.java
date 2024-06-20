@@ -12,8 +12,12 @@ import jakarta.servlet.http.HttpServletRequestWrapper;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -25,17 +29,20 @@ import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
+@RequiredArgsConstructor
 public class PasswordEncryptFilter extends HttpFilter {
 
+    private final PasswordEncoder passwordEncoder;
     @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        if (PasswordEncryptUrls.getAllUrls().contains(request.getRequestURI())){
+        if (PasswordEncryptUrls.SIGNUP.getUrl().equals(request.getRequestURI())){
             log.debug("filter test {} ",request.getRequestURI());
             Gson gson = new Gson();
             PasswordEncryptServletRequestWrapper requestWrapper = new PasswordEncryptServletRequestWrapper(request);
             HashMap<String,String> bodyMap = gson.fromJson(requestWrapper.getRequestBody(), HashMap.class);
-            String encryptPw = new BCryptPasswordEncoder().encode(bodyMap.get("password"));
+
+            String encryptPw = passwordEncoder.encode(bodyMap.get("password"));
             bodyMap.put("password",encryptPw);
             log.debug("modiReq {}", bodyMap);
             String modiRequest = gson.toJson(bodyMap);
