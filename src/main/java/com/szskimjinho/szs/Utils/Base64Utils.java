@@ -1,4 +1,4 @@
-package com.szskimjinho.Utils;
+package com.szskimjinho.szs.Utils;
 
 import java.util.Base64;
 

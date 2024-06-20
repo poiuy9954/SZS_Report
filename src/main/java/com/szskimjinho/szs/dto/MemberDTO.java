@@ -1,7 +1,6 @@
 package com.szskimjinho.szs.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.szskimjinho.Utils.StringUtils;
 import lombok.*;
 
 @Setter

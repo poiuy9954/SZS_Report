@@ -1,6 +1,6 @@
 package com.szskimjinho.szs.entity;
 
-import com.szskimjinho.base.BaseEntity;
+import com.szskimjinho.szs.base.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
@@ -17,11 +17,19 @@ public class Member extends BaseEntity {
     @UuidGenerator
     private String memberKey;
 
+    @Column(unique = true)
     private String userId;
+    @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String userName;
-    private String regNo;
-    private String bDay;
+    @Column(nullable = false)
     private String gender;
+    @Column(nullable = false)
+    private String regNo;
+    @Column(nullable = false)
+    private String bDay;
+
+
 
 }

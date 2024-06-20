@@ -1,6 +1,6 @@
 package com.szskimjinho.szs.service;
 
-import com.szskimjinho.Constant.Constant;
+import com.szskimjinho.szs.constant.Constant;
 import com.szskimjinho.szs.dto.MemberDTO;
 import com.szskimjinho.szs.dto.ResDTO;
 import lombok.RequiredArgsConstructor;

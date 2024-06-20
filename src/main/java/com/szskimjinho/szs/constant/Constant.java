@@ -1,4 +1,4 @@
-package com.szskimjinho.Constant;
+package com.szskimjinho.szs.constant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

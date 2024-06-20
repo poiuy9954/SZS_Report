@@ -1,6 +1,6 @@
 package com.szskimjinho.szs.mapstructure;
 
-import com.szskimjinho.Utils.Base64Utils;
+import com.szskimjinho.szs.Utils.Base64Utils;
 import org.mapstruct.Named;
 
 public interface toBase64QualfiedByName {

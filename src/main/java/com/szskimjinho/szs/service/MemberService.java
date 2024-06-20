@@ -18,6 +18,11 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final MemberMapper memberMapper;
 
+    public MemberDTO getMemberByUserId(String userId){
+        log.info("MemberService::getMemberByUserId");
+        return memberMapper.toMemberDTO(memberRepository.findByUserId(userId));
+    }
+
     public boolean existById(MemberDTO memberDTO){
         log.info("MemberService::existById");
         log.debug("MemberService::existById memberDTO {} " , memberDTO);
@@ -41,5 +46,6 @@ public class MemberService {
                 memberMapper.toMemberEntity(memberDTO)
         );
     }
+
 
 }

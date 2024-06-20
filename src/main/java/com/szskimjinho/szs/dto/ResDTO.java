@@ -1,7 +1,7 @@
 package com.szskimjinho.szs.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.szskimjinho.Constant.Constant;
+import com.szskimjinho.szs.constant.Constant;
 import lombok.*;
 
 @Getter

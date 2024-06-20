@@ -1,22 +1,17 @@
 package com.szskimjinho.szs.controller;
 
 
-import com.szskimjinho.Constant.Constant;
-import com.szskimjinho.szs.dto.MemberDTO;
+import com.szskimjinho.szs.constant.Constant;
+import com.szskimjinho.szs.dto.ReqLoginDTO;
 import com.szskimjinho.szs.dto.ReqSignUpDTO;
 import com.szskimjinho.szs.dto.ResDTO;
-import com.szskimjinho.szs.entity.Member;
+import com.szskimjinho.szs.dto.ResLoginDTO;
 import com.szskimjinho.szs.mapstructure.ReqDTOMapper;
-import com.szskimjinho.szs.service.AuthorizationMemberService;
-import com.szskimjinho.szs.service.MemberService;
+import com.szskimjinho.szs.service.LoginMemberRuleService;
 import com.szskimjinho.szs.service.SignUpMemberRuleService;
-import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.UUID;
 
 @RestController
 @Slf4j
@@ -25,6 +20,7 @@ import java.util.UUID;
 public class LoginController {
 
     private final SignUpMemberRuleService signUpMemberRuleService;
+    private final LoginMemberRuleService loginMemberRuleService;
     private final ReqDTOMapper reqDTOMapper;
     
     @GetMapping("/getAuthSignupUser")
@@ -33,18 +29,23 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public String szsLogin(){
-        return null;
+    public ResLoginDTO szsLogin(@RequestBody ReqLoginDTO reqLoginDTO){
+        log.debug("LoginController::szsLogin {}", reqLoginDTO);
+        if (!reqLoginDTO.chkValidation()){
+            ResLoginDTO resLoginDTO = new ResLoginDTO();
+            resLoginDTO.setResDTO(ResLoginDTO.LoginMsg.F00002);
+        }
+        return loginMemberRuleService.loginMember(reqDTOMapper.ReqLoginDtoToMemberDto(reqLoginDTO));
     }
 
     @PostMapping("/signup")
     public ResDTO szsSignUp( @RequestBody ReqSignUpDTO signUpDTO){
+        log.debug("LoginController::szsSignUp {}",signUpDTO);
         if (!signUpDTO.chkValidation()) {
             ResDTO resDTO = new ResDTO();
             resDTO.setResDTO(Constant.ResDTO.F00003);
             return resDTO;
         }
-        // TODO: 2024/06/18 주민번호 암호화? Base64..?
         return signUpMemberRuleService.registeMember(reqDTOMapper.ReqSignUpDtoToMemberDto(signUpDTO));
     }
 }

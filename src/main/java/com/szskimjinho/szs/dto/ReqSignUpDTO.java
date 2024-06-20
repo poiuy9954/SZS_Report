@@ -1,13 +1,13 @@
 package com.szskimjinho.szs.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.szskimjinho.Constant.Constant;
-import com.szskimjinho.Utils.StringUtils;
+import com.szskimjinho.szs.constant.Constant;
+import com.szskimjinho.szs.Utils.StringUtils;
 import lombok.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Base64;
 
 @Setter
 @Getter
@@ -16,11 +16,11 @@ import java.util.Base64;
 @NoArgsConstructor
 @ToString
 public class ReqSignUpDTO {
+
     private String userId;
     private String password;
     private String name;
     private String regNo;
-
 
     @JsonIgnore
     public boolean chkValidation(){

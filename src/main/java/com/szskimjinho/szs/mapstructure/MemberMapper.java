@@ -1,13 +1,10 @@
 package com.szskimjinho.szs.mapstructure;
 
-import com.szskimjinho.Utils.Base64Utils;
-import com.szskimjinho.Utils.StringUtils;
+import com.szskimjinho.szs.Utils.StringUtils;
 import com.szskimjinho.szs.dto.MemberDTO;
 import com.szskimjinho.szs.entity.Member;
-import jdk.jfr.Name;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.Mappings;
 import org.mapstruct.Named;
 
 import java.util.List;

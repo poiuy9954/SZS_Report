@@ -1,4 +1,4 @@
-package com.szskimjinho.base;
+package com.szskimjinho.szs.base;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
