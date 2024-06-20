@@ -35,7 +35,7 @@ public class LoginController {
             ResLoginDTO resLoginDTO = new ResLoginDTO();
             resLoginDTO.setResDTO(ResLoginDTO.LoginMsg.F00002);
         }
-        return loginMemberRuleService.loginMember(reqDTOMapper.ReqLoginDtoToMemberDto(reqLoginDTO));
+        return loginMemberRuleService.loginMember(reqDTOMapper.reqLoginDtoToMemberDto(reqLoginDTO));
     }
 
     @PostMapping("/signup")
@@ -46,6 +46,6 @@ public class LoginController {
             resDTO.setResDTO(Constant.ResDTO.F00003);
             return resDTO;
         }
-        return signUpMemberRuleService.registeMember(reqDTOMapper.ReqSignUpDtoToMemberDto(signUpDTO));
+        return signUpMemberRuleService.registeMember(reqDTOMapper.reqSignUpDtoToMemberDto(signUpDTO));
     }
 }

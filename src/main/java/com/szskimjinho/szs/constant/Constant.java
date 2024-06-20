@@ -2,6 +2,7 @@ package com.szskimjinho.szs.constant;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.http.HttpMethod;
 
 import java.util.regex.Pattern;
 
@@ -23,5 +24,23 @@ public class Constant {
         private final String code;
         private final String msg;
         private final String errCode;
+    }
+
+    @Getter
+    @AllArgsConstructor
+    public enum XAppKey{
+        X_API_KEY("X-API-KEY","aXC8zK6puHIf9l53L8TiQg==")
+        ;
+        private String headerKey;
+        private String key;
+    }
+
+    @Getter
+    @AllArgsConstructor
+    public enum Urls{
+        SCRAP("https://codetest-v4.3o3.co.kr/scrap", HttpMethod.POST)
+        ;
+        String url;
+        HttpMethod method;
     }
 }

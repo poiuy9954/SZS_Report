@@ -22,26 +22,24 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig {
 
     private final JWTUtils jwtUtils;
+    private final PasswordEncoder passwordEncoder;
+    private final JwtAuthFilter jwtAuthFilter;
+
     @Bean
     SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
                 .csrf((csrf)->csrf.disable())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests((authrize)->
-                        authrize.requestMatchers(new AntPathRequestMatcher("/szs/login"),new AntPathRequestMatcher("/szs/signup"),new AntPathRequestMatcher("/**"))
+                        authrize.requestMatchers(new AntPathRequestMatcher("/szs/login"),new AntPathRequestMatcher("/szs/signup")/*,new AntPathRequestMatcher("/**")*/)
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated())
                 .headers((headers)->headers.addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsHeaderWriter.XFrameOptionsMode.SAMEORIGIN)))
-//                .addFilterBefore()
-                .addFilterBefore(new PasswordEncryptFilter(passwordEncoder()), UsernamePasswordAuthenticationFilter.class)
-                .addFilterBefore(new JwtAuthFilter(jwtUtils), PasswordEncryptFilter.class)
+                .addFilterBefore(new PasswordEncryptFilter(passwordEncoder), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(jwtAuthFilter, PasswordEncryptFilter.class)
 
         ;
         return httpSecurity.build();
-    }
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
     }
 }

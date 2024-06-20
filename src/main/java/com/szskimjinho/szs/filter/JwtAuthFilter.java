@@ -12,19 +12,23 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 @Slf4j
+@Component
 @RequiredArgsConstructor
 public class JwtAuthFilter extends OncePerRequestFilter {
     private final JWTUtils jwtUtils;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        log.info("JwtAuthFilter::doFilterInternal");
         String jwt = getJwtFromRequest(request);
+        log.debug("JwtAuthFilter jwt {}",jwt);
         if(jwt!=null && jwtUtils.validJwt(jwt)){
             String userName = jwtUtils.getUserName(jwt);
             User user = new User(userName,"",new ArrayList<>());
