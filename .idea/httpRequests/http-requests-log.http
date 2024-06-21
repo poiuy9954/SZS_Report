@@ -1,3 +1,71 @@
+GET http://localhost:8080/szs/refund
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTY1ODk5LCJleHAiOjE3MTg5Njc2OTl9.fvC669hlEi_KVB1Ic5MnJHm52WWv8RIJ7DwpzJb70cDYfq8nYWRZlDAlHpzthBbcnXR9vcnW-2A-1Ny_tcISHw
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTY1ODk5LCJleHAiOjE3MTg5Njc2OTl9.fvC669hlEi_KVB1Ic5MnJHm52WWv8RIJ7DwpzJb70cDYfq8nYWRZlDAlHpzthBbcnXR9vcnW-2A-1Ny_tcISHw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T193153.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTYzOTAxLCJleHAiOjE3MTg5NjU3MDF9.jYzbI6rieJOPorAfMux70T_LtE3XeJy28d8MYRjwSOonI1HFsgUHxr7iU_0fWDbRiCuq6Bl8KGuwVIScNNTAWg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T193139.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T193135.200.json
+
+###
+
 POST http://localhost:8080/szs/scrap
 accept: */*
 Content-Type: application/json
@@ -651,73 +719,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 }
 
 <> 2024-06-21T182929.200.json
-
-###
-
-GET http://localhost:8080/szs/refund
-accept: */*
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTYxOTc2LCJleHAiOjE3MTg5NjM3NzZ9.fvIeg_OXJHge-x7WF0CEUR_5vawKkMng-bW_nN1hNuu0Z80Mz6Y3h-EGeNxfDdC-RLCtQ-JcSH48hHx1MrTh-A
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-06-21T182828.200.txt
-
-###
-
-POST http://localhost:8080/szs/scrap
-accept: */*
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTYxOTc2LCJleHAiOjE3MTg5NjM3NzZ9.fvIeg_OXJHge-x7WF0CEUR_5vawKkMng-bW_nN1hNuu0Z80Mz6Y3h-EGeNxfDdC-RLCtQ-JcSH48hHx1MrTh-A
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-06-21T182826.200.txt
-
-###
-
-POST http://localhost:8080/szs/signup
-accept: */*
-Content-Type: application/json
-Content-Length: 87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-"userId": "kw68", "password": "123456", "name": "동탁",
-"regNo": "921108-1582816"
-}
-
-<> 2024-06-21T182824.200.json
-
-###
-
-GET http://localhost:8080/szs/refund
-accept: */*
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTYxOTc2LCJleHAiOjE3MTg5NjM3NzZ9.fvIeg_OXJHge-x7WF0CEUR_5vawKkMng-bW_nN1hNuu0Z80Mz6Y3h-EGeNxfDdC-RLCtQ-JcSH48hHx1MrTh-A
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-06-21T182720.200.txt
-
-###
-
-POST http://localhost:8080/szs/scrap
-accept: */*
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTYxOTc2LCJleHAiOjE3MTg5NjM3NzZ9.fvIeg_OXJHge-x7WF0CEUR_5vawKkMng-bW_nN1hNuu0Z80Mz6Y3h-EGeNxfDdC-RLCtQ-JcSH48hHx1MrTh-A
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-06-21T182717.200.txt
 
 ###
 

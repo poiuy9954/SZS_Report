@@ -36,7 +36,7 @@ public class ResRefundMsg {
     public enum RefundMsg{
         S00000("S","계산완료","S00000"),
         F00001("F","존재하지않는 고객","F00001"),
-        F00002("F","로그인실패-입력값을 확인하세요","F00002")
+        F00002("F","계산할 데이터가 없습니다.","F00002")
         ;
 
         private final String code;

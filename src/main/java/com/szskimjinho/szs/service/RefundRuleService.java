@@ -40,6 +40,11 @@ public class RefundRuleService {
         }
 
         IncomeDTO incomeDTO = refundService.getIncome(memberDTO.getUserId());
+        if(incomeDTO==null){
+            ResRefundMsg refundMsg = new ResRefundMsg();
+            refundMsg.setFaildMsg(ResRefundMsg.RefundMsg.F00002);
+            return refundMsg;
+        }
         log.debug("RefundRuleService::getTaxAmount income {}",incomeDTO);
 
         List<DeductionDTO> deductionDTOS = refundService.getDeductionDTOList(incomeDTO.getIncomeKey());
