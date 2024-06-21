@@ -1,11 +1,12 @@
 package com.szskimjinho.szs.mapstructure;
 
 import com.szskimjinho.szs.Utils.StringUtils;
+import com.szskimjinho.szs.dto.DeductionDTO;
 import com.szskimjinho.szs.dto.ScrapResltDTO;
 import com.szskimjinho.szs.entity.DeductionDetail;
 import com.szskimjinho.szs.entity.Income;
 import org.mapstruct.Mapper;
-import org.springframework.data.relational.core.sql.In;
+import org.mapstruct.Mapping;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -47,5 +48,10 @@ public interface DeductionDetailMapper {
         }
         return details;
     }
+
+    @Mapping(source = "income.incomeKey",target = "incomeKey")
+    DeductionDTO toDTO(DeductionDetail deductionDetail);
+
+    List<DeductionDTO> toDTOList(List<DeductionDetail> deductionDetails);
 
 }

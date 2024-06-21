@@ -3,12 +3,16 @@ package com.szskimjinho.szs.service;
 import com.google.gson.Gson;
 import com.szskimjinho.szs.Utils.JWTUtils;
 import com.szskimjinho.szs.dto.MemberDTO;
+import com.szskimjinho.szs.dto.ResScrapMsg;
 import com.szskimjinho.szs.dto.RestReqScrapDTO;
 import com.szskimjinho.szs.dto.ScrapResltDTO;
 import com.szskimjinho.szs.mapstructure.ReqDTOMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+
+import java.util.HashMap;
 
 @Service
 @Slf4j
@@ -20,31 +24,40 @@ public class ScrapRuleService {
     private final ReqDTOMapper reqDTOMapper;
     private final ScrapService scrapService;
 
-    public void scrapRule(String authorization) {
+    public ResScrapMsg scrapRule(String authorization) {
         log.info("ScrapRuleService::scrapRule");
 
         String userId = jwtUtils.getUserName(authorization.substring(7));
-        log.info("asdasd  " + userId);
+
 
         MemberDTO memberDTO = memberService.getMemberByUserId(userId);
-        log.info("asdasd" + memberDTO);
+        if(memberDTO==null){
+            ResScrapMsg resScrapMsg = new ResScrapMsg();
+            resScrapMsg.setMsg(ResScrapMsg.RefundMsg.F00001);
+            return resScrapMsg;
+        }
 
         RestReqScrapDTO restReqScrapDTO = reqDTOMapper.memberToRestReqScrapDTO(memberDTO);
-        log.info("asdasd  " + restReqScrapDTO);
 
-//        HashMap<String, String> hashMap = scrapService.sendScrapReq(restReqScrapDTO);
-//        log.info("asdad   " + hashMap);
-//
-//        String json = new Gson().toJson(hashMap);
-//        log.info("json sd {}", json);
 
-        ScrapResltDTO scrapResltDTO = new Gson().fromJson(getJsonTest(), ScrapResltDTO.class);
-//        ScrapResltDTO scrapResltDTO = new Gson().fromJson(json, ScrapResltDTO.class);
-        log.info("ScrapResltDTO {} ", scrapResltDTO);
+        HashMap<String, String> hashMap = scrapService.sendScrapReq(restReqScrapDTO);
+        if (CollectionUtils.isEmpty(hashMap)){
+            ResScrapMsg resScrapMsg = new ResScrapMsg();
+            resScrapMsg.setMsg(ResScrapMsg.RefundMsg.F00002);
+            return resScrapMsg;
+        }
+        String json = new Gson().toJson(hashMap);
+        ScrapResltDTO scrapResltDTO = new Gson().fromJson(json, ScrapResltDTO.class);
+
+//        0621 502에러로 접근이 안되어 임시조치
+//        ScrapResltDTO scrapResltDTO = new Gson().fromJson(getJsonTest(), ScrapResltDTO.class);
+        log.debug("ScrapResltDTO {} ", scrapResltDTO);
 
         scrapService.saveScrapRslt(scrapResltDTO,memberDTO);
 
-
+        ResScrapMsg resScrapMsg = new ResScrapMsg();
+        resScrapMsg.setMsg(ResScrapMsg.RefundMsg.S00000);
+        return resScrapMsg;
     }
 
     private String getJsonTest(){

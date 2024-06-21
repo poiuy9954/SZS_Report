@@ -1,10 +1,8 @@
 package com.szskimjinho.szs.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-import org.hibernate.annotations.ManyToAny;
 import org.hibernate.annotations.UuidGenerator;
 
 @Entity
@@ -20,12 +18,14 @@ public class Income {
     private Member member;
 
     //세액공제 필드
-    private String taxCredit;
+    private String incomValue;
+    private String craditTax;
 
     @Builder
-    public Income(Member member, String taxCredit) {
+    public Income(Member member, String incomValue,String craditTax) {
         this.member = member;
-        this.taxCredit = taxCredit;
+        this.incomValue = incomValue;
+        this.craditTax=craditTax;
     }
 
     public Income() {

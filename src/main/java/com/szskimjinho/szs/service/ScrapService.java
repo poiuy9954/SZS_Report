@@ -1,5 +1,6 @@
 package com.szskimjinho.szs.service;
 
+import com.szskimjinho.szs.Utils.StringUtils;
 import com.szskimjinho.szs.constant.Constant;
 import com.szskimjinho.szs.dto.MemberDTO;
 import com.szskimjinho.szs.dto.RestReqScrapDTO;
@@ -36,23 +37,23 @@ public class ScrapService {
     private final IncomeRepository incomeRepository;
     private final DeductionDetailRepository deductionDetailRepository;
 
-    public void test(){
-//        RestTemplate rest = new RestTemplate();
-//        rest.postForEntity("https://codetest-v4.3o3.co.kr/scrap",)
-
-
-    }
 
     public HashMap<String,String> sendScrapReq(RestReqScrapDTO restReqScrapDTO){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set(Constant.XAppKey.X_API_KEY.getHeaderKey(), Constant.XAppKey.X_API_KEY.getKey());
-
+        ResponseEntity<Map> responseEntity = null;
         HttpEntity<RestReqScrapDTO> entity = new HttpEntity<>(restReqScrapDTO,headers);
-        log.debug("asdasdas :: {}",entity);
-        ResponseEntity<Map> responseEntity = restTemplate.exchange(Constant.Urls.SCRAP.getUrl(), Constant.Urls.SCRAP.getMethod(), entity,Map.class);
-        log.debug("sendScrapReq :: {}",responseEntity.getBody());
-        return new HashMap<>(responseEntity.getBody());
+        try {
+            responseEntity = restTemplate.exchange(Constant.Urls.SCRAP.getUrl(), Constant.Urls.SCRAP.getMethod(), entity,Map.class);
+        }catch (Exception e){
+            return null;
+        }
+        if (responseEntity != null){
+            log.debug("sendScrapReq :: {}",responseEntity.getBody());
+            return new HashMap<>(responseEntity.getBody());
+        }
+        return null;
     }
 
     public void saveScrapRslt(ScrapResltDTO scrapResltDTO, MemberDTO memberDTO){
@@ -99,9 +100,15 @@ public class ScrapService {
 
     public Income saveIncome(MemberDTO memberDTO, ScrapResltDTO.Data data) {
         Income income;
+        String craditTax;
+        if (data.get소득공제() != null)
+            craditTax=data.get소득공제().get세액공제();
+        else
+            craditTax="0";
         income = Income.builder()
                 .member(memberMapper.toMemberEntity(memberDTO))
-                .taxCredit(data.get종합소득금액())
+                .incomValue(data.get종합소득금액())
+                .craditTax(StringUtils.isNone(craditTax) ?"0":craditTax)
                 .build();
         incomeRepository.save(income);
         return income;

@@ -1,5 +1,9 @@
 package com.szskimjinho.szs.controller;
 
+import com.szskimjinho.szs.dto.ResRefundMsg;
+import com.szskimjinho.szs.dto.ResScrapMsg;
+import com.szskimjinho.szs.service.RefundRuleService;
+import com.szskimjinho.szs.service.RefundService;
 import com.szskimjinho.szs.service.ScrapRuleService;
 import com.szskimjinho.szs.service.ScrapService;
 import lombok.RequiredArgsConstructor;
@@ -15,16 +19,17 @@ import java.util.Map;
 public class TaxController {
 
     private final ScrapRuleService scrapRuleService;
+    private final RefundRuleService refundRuleService;
     @GetMapping("/refund")
-    public String getTest(){
-        return "asdasd";
+    public ResRefundMsg getTest(@RequestHeader Map<String,String > header){
+        return refundRuleService.getTaxAmount(header.get("authorization"));
     }
 
     @PostMapping("/scrap")
-    public String szsScrap(@RequestHeader Map<String,String > header){
+    public ResScrapMsg szsScrap(@RequestHeader Map<String,String > header){
         log.info("TaxController::szsScrap");
         log.info("TaxController::szsScrap {}", header);
-        scrapRuleService.scrapRule(header.get("authorization"));
-        return "실행되었습니다.";
+        ResScrapMsg resScrapMsg = scrapRuleService.scrapRule(header.get("authorization"));
+        return resScrapMsg;
     }
 }
