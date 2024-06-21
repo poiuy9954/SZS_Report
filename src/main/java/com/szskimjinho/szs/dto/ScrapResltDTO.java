@@ -4,7 +4,6 @@ import lombok.*;
 
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Getter
 @Setter
@@ -15,11 +14,11 @@ import java.util.Map;
 @Builder
 public class ScrapResltDTO {
 
-    private data data;
+    private Data data;
     @Getter
     @Setter
     @ToString
-    public static class data{
+    public static class Data {
         String 이름;
         String 종합소득금액;
         Taxminus 소득공제;

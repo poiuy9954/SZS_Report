@@ -25,6 +25,6 @@ public class TaxController {
         log.info("TaxController::szsScrap");
         log.info("TaxController::szsScrap {}", header);
         scrapRuleService.scrapRule(header.get("authorization"));
-        return "asdadsd";
+        return "실행되었습니다.";
     }
 }

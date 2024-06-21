@@ -16,4 +16,8 @@ public class MemberDTO {
     private String password;
     private String name;
     private String regNo;
+
+    public boolean chkName(String name){
+        return this.getName().equals(name);
+    }
 }

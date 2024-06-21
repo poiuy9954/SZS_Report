@@ -31,7 +31,11 @@ public class SecurityConfig {
                 .csrf((csrf)->csrf.disable())
                 .sessionManagement(session->session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests((authrize)->
-                        authrize.requestMatchers(new AntPathRequestMatcher("/szs/login"),new AntPathRequestMatcher("/szs/signup")/*,new AntPathRequestMatcher("/**")*/)
+                        authrize.requestMatchers(
+                                        new AntPathRequestMatcher("/h2-console/**")
+                                        ,new AntPathRequestMatcher("/szs/login")
+                                        ,new AntPathRequestMatcher("/szs/signup")
+                                )
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated())

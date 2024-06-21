@@ -32,14 +32,5 @@ public class MemberRepositoryTests {
     }
     @Test
     public void createMember() {
-        IntStream.rangeClosed(1,10).forEach(e->{
-            memberRepository.save(Member.builder()
-                    .memberKey(UUID.randomUUID().toString())
-                    .userId("poiy"+e)
-                    .password("12312313")
-                    .userName("김진"+e)
-                    .regNo("9104241155932")
-                    .build());
-        });
     }
 }

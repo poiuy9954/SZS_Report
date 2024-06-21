@@ -1,0 +1,750 @@
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 57
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+    "name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T152156.502.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T152141.502.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T152134.502.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T140133.502.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQ1ODg1LCJleHAiOjE3MTg5NDc2ODV9.X3pyIdwNrjDpQ7nMY7Stl0a3hDsNtAPIoXX1yYFexfv6oN6JznEDmCxeWFK1OR-vmYRKo1MJ5hvwNCIQhEUIWw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T140016.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T140010.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQ1ODg1LCJleHAiOjE3MTg5NDc2ODV9.X3pyIdwNrjDpQ7nMY7Stl0a3hDsNtAPIoXX1yYFexfv6oN6JznEDmCxeWFK1OR-vmYRKo1MJ5hvwNCIQhEUIWw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T135906.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T135859.200.json
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T135805.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T135803.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T135800.200.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T132549.502.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T132541.502.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQzMzE5LCJleHAiOjE3MTg5NDUxMTl9.E0fSZoSFyjGjb623hGyfaRCRP_Oyk4x9ulOmCuUMOfClcnMLQh4-RL4RiRPo9Mh9dmnPjInyRrLAK9MlltjReg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T131606.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T131603.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQzMzE5LCJleHAiOjE3MTg5NDUxMTl9.E0fSZoSFyjGjb623hGyfaRCRP_Oyk4x9ulOmCuUMOfClcnMLQh4-RL4RiRPo9Mh9dmnPjInyRrLAK9MlltjReg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQzMzE5LCJleHAiOjE3MTg5NDUxMTl9.E0fSZoSFyjGjb623hGyfaRCRP_Oyk4x9ulOmCuUMOfClcnMLQh4-RL4RiRPo9Mh9dmnPjInyRrLAK9MlltjReg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T131519.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T131515.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQyNjkzLCJleHAiOjE3MTg5NDQ0OTN9.TytkWfejrfguoLusZRQZCHUYduObkYJ9nm1TMCPmy9m4SvmHCRt88mm2ldE6c0m9SOIZT5a56LDv4suH4fmPlA
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T130453.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T130449.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTQwMDg4LCJleHAiOjE3MTg5NDE4ODh9.nNgbcZCtj1sAlTjaeFLpObWvAVeyBKeKEM0cirBYo1kPwLwEGx4IJnjAf5HWX0f4XAlX8z7qPKr3qi6Xr5W4jw
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T122139.200.txt
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T122128.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T122126.200.json
+
+###
+
+POST https://codetest-v4.3o3.co.kr/scrap
+X-API-KEY: aXC8zK6puHIf9l53L8TiQg==
+Content-Type: application/json
+Content-Length: 53
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"name" : "동탁",
+    "regNo" : "921108-1582816"
+}
+
+<> 2024-06-21T114538.502.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTM3ODA4LCJleHAiOjE3MTg5Mzk2MDh9.fMtT8W3gwslHTC9wT7Pji9rWZYuxqbVgNSumhLYrOSB4hHcctqYJVBMNzQMKiVffg97RWfucmzIbNrre31rcGA
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T114347.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTM3ODA4LCJleHAiOjE3MTg5Mzk2MDh9.fMtT8W3gwslHTC9wT7Pji9rWZYuxqbVgNSumhLYrOSB4hHcctqYJVBMNzQMKiVffg97RWfucmzIbNrre31rcGA
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T114328.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA5MTAxLCJleHAiOjE3MTg5MTA5MDF9.HOTVBDCwKUV-gr3TKL3mc51m7YznI9Za1xwDF-AjDMXBeMGhXoc02Z45y3VoHv4MJgqDWkH0zkJfwwD4AXMq1A
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA5MTAxLCJleHAiOjE3MTg5MTA5MDF9.HOTVBDCwKUV-gr3TKL3mc51m7YznI9Za1xwDF-AjDMXBeMGhXoc02Z45y3VoHv4MJgqDWkH0zkJfwwD4AXMq1A
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T035242.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T035228.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA5MTAxLCJleHAiOjE3MTg5MTA5MDF9.HOTVBDCwKUV-gr3TKL3mc51m7YznI9Za1xwDF-AjDMXBeMGhXoc02Z45y3VoHv4MJgqDWkH0zkJfwwD4AXMq1A
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T035133.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T035119.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA5MTAxLCJleHAiOjE3MTg5MTA5MDF9.HOTVBDCwKUV-gr3TKL3mc51m7YznI9Za1xwDF-AjDMXBeMGhXoc02Z45y3VoHv4MJgqDWkH0zkJfwwD4AXMq1A
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T034705.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T034659.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA5MTAxLCJleHAiOjE3MTg5MTA5MDF9.HOTVBDCwKUV-gr3TKL3mc51m7YznI9Za1xwDF-AjDMXBeMGhXoc02Z45y3VoHv4MJgqDWkH0zkJfwwD4AXMq1A
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T034501.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T034459.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T033954.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T033748.200.txt
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T033733.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T033610.200.txt
+
+###
+
+POST http://localhost:8080/szs/login
+accept: */*
+Content-Type: application/json
+Content-Length: 46
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "userId": "kw68",
+  "password": "123456"
+}
+
+<> 2024-06-21T033559.200.json
+
+###
+
+POST http://localhost:8080/szs/signup
+accept: */*
+Content-Type: application/json
+Content-Length: 87
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+"userId": "kw68", "password": "123456", "name": "동탁",
+"regNo": "921108-1582816"
+}
+
+<> 2024-06-21T033556.200.json
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+POST http://localhost:8080/szs/scrap
+accept: */*
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrdzY4IiwiaWF0IjoxNzE4OTA3NjMyLCJleHAiOjE3MTg5MDk0MzJ9.-9LrEWlf1WNe46MX50qO14IRNOxNN9492KjCrHiuCZtRwzQwi0rzqXsNyLy4Ehu1y0iq3d0szCwMbOIaVC_btg
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-06-21T032612.200.txt
+
+###
+

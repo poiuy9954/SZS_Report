@@ -24,10 +24,8 @@ public class Member extends BaseEntity {
     @Column(nullable = false)
     private String userName;
     @Column(nullable = false)
-    private String gender;
-    @Column(nullable = false)
     private String regNo;
-    @Column(nullable = false)
+    private String gender;
     private String bDay;
 
 
