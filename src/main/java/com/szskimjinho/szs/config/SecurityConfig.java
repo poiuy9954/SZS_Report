@@ -33,6 +33,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests((authrize)->
                         authrize.requestMatchers(
                                         new AntPathRequestMatcher("/h2-console/**")
+                                        ,new AntPathRequestMatcher("/3o3/**")
+                                        ,new AntPathRequestMatcher("/swagger-ui/**")
                                         ,new AntPathRequestMatcher("/szs/login")
                                         ,new AntPathRequestMatcher("/szs/signup")
                                 )
