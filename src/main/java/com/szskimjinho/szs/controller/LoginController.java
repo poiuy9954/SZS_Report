@@ -22,11 +22,6 @@ public class LoginController {
     private final SignUpMemberRuleService signUpMemberRuleService;
     private final LoginMemberRuleService loginMemberRuleService;
     private final ReqDTOMapper reqDTOMapper;
-    
-    @GetMapping("/getAuthSignupUser")
-    public String getAuthSignupUser(){
-        return "authUsers";
-    }
 
     @PostMapping("/login")
     public ResLoginDTO szsLogin(@RequestBody ReqLoginDTO reqLoginDTO){
