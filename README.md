@@ -26,7 +26,7 @@
    -스크랩API 전송(Header set)
    -국민연금 공제 저장(DeductionDetail table, kind:NAT)
    -신용카드 공제 저장(DeductionDetail table, kind:CDC)
-8. 
+
 
 
 
